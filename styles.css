@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: hsl(180, 100%, 20%);
+}
+
+#myH1 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: "Arial", sans-serif;
+    color: hsl(36, 100%, 70%);
+    text-align: center;
+}
+
+#container {
+    width: min(100%, 600px);
+    padding: clamp(1.5rem, 3vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid hsl(0, 0%, 90%);
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+#display {
+    width: 100%;
+    font-size: clamp(2rem, 7vw, 5rem);
+    font-family: monospace;
+    font-weight: bold;
+    color: hsl(0, 0%, 10%);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    word-break: break-all;
+}
+
+#controls {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+#controls button {
+    flex: 1 1 140px;
+    max-width: 180px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.9rem 1rem;
+    border: none;
+    border-radius: 0.9rem;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+#controls button:hover {
+    transform: translateY(-1px);
+}
+
+#startBtn {
+    background-color: hsl(120, 100%, 25%);
+}
+
+#startBtn:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+
+#stopBtn {
+    background-color: hsl(0, 100%, 25%);
+}
+
+#stopBtn:hover {
+    background-color: hsl(0, 100%, 40%);
+}
+
+#resetBtn {
+    background-color: hsl(240, 100%, 25%);
+}
+
+#resetBtn:hover {
+    background-color: hsl(240, 100%, 40%);
+}
+
+@media (max-width: 480px) {
+    #controls button {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+}
